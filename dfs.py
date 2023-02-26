@@ -35,8 +35,8 @@ class TrueRegistration:
         pas = '1234567'
         return pas
 
-class Login:
-    def true_log_in(self):
-        driver.find_element(*Locators.mail_login).send_keys(TrueRegistration.mail())
-        driver.find_element(*Locators.password_login).send_keys(TrueRegistration.password())
-        driver.find_element(*Locators.enter).click()
+# class Login:
+#     def true_log_in(self):
+#         driver.find_element(*Locators.mail_login).send_keys(TrueRegistration.mail())
+#         driver.find_element(*Locators.password_login).send_keys(TrueRegistration.password())
+#         driver.find_element(*Locators.enter).click()
