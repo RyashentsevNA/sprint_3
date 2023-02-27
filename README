@@ -1,5 +1,5 @@
-test_random_registration
-test_registration_incorrect_password
+test_random_registration - тест успешной регистрации
+test_registration_incorrect_password - тест для некорректного пароля.
 test_enter_to_personal_account - переход по клику на «Личный кабинет»
 test_log_in_to_account_enter - тест входа через "Войти в аккаунт"
 test_log_in_to_account- тест входа через "Личный кабинет"
