@@ -2,7 +2,6 @@ import random
 from random import choices, sample
 import string
 from tests import *
-from page_objects import *
 class RandomRegistration:
     def name():
         random_letters = ''.join(random.choices(string.ascii_letters, k=10))
