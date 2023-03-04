@@ -1,8 +1,11 @@
+import time
+
 from selenium import webdriver
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from page_objects import Locators
-from dfs import RandomRegistration
+from conftest import RandomRegistration
+from  page_objects import Locators
 
 driver = webdriver.Chrome()
 driver.set_window_size(1920, 1080)
@@ -19,7 +22,7 @@ class TestRegistration:
         WebDriverWait(driver, 60).until(expected_conditions.visibility_of_element_located(Locators.log_into))
         title=driver.find_element(*Locators.log_into).text
         assert title == 'Зарегистрироваться'
-        driver.quite()
+
 
     def test_registration_incorrect_password(self):
         driver.get("https://stellarburgers.nomoreparties.site")
@@ -32,4 +35,4 @@ class TestRegistration:
         WebDriverWait(driver, 60).until(expected_conditions.visibility_of_element_located(Locators.incorrect_password))
         password=driver.find_element(*Locators.incorrect_password).text
         assert password == 'Некорректный пароль'
-        driver.quite()
+        driver.quit()

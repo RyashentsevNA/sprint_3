@@ -1,7 +1,13 @@
 import random
 from random import choices, sample
 import string
-from tests import *
+from test_cases import *
+import pytest
+from selenium import webdriver
+driver = webdriver.Chrome()
+
+
+
 class RandomRegistration:
     def name():
         random_letters = ''.join(random.choices(string.ascii_letters, k=10))
@@ -39,3 +45,12 @@ class TrueRegistration:
 #         driver.find_element(*Locators.mail_login).send_keys(TrueRegistration.mail())
 #         driver.find_element(*Locators.password_login).send_keys(TrueRegistration.password())
 #         driver.find_element(*Locators.enter).click()
+
+
+
+
+# @pytest.fixture
+# def connect():
+#     connection = driver.get("https://stellarburgers.nomoreparties.site")
+#     driver.set_window_size(1920, 1080)
+#     return connection

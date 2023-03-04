@@ -1,8 +1,12 @@
+import time
+
+from _pytest import mark
 from selenium import webdriver
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from page_objects import Locators
-from dfs import TrueRegistration
+from conftest import TrueRegistration
+import pytest
 
 driver = webdriver.Chrome()
 driver.set_window_size(1920, 1080)
@@ -27,4 +31,4 @@ class Test_constructor_bar:
         driver.find_element(*Locators.filling).click()
         filling = driver.find_element(*Locators.search_filling).text
         assert filling == 'Мясо бессмертных моллюсков Protostomia'
-        driver.quite()
+        driver.quit()
