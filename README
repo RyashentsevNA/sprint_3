@@ -1,0 +1,11 @@
+test_random_registration - тест успешной регистрации
+test_registration_incorrect_password - тест для некорректного пароля.
+test_enter_to_personal_account - переход по клику на «Личный кабинет»
+test_log_in_to_account_enter - тест входа через "Войти в аккаунт"
+test_log_in_to_account- тест входа через "Личный кабинет"
+test_log_in_from_registration - тест входа через кнопку в форме регистрации
+test_log_in_from_recover_password - тест входа через форму восстановления пароля
+test_constructor_bar - переходы к разделам:«Булки»,«Соусы»,«Начинки»
+test_exit_from_personal_account - Выход из личного кабинета
+test_enter_to_the_constructor_button - Переход из личного кабинета в конструктор по клику на «Конструктор»
+test_enter_to_the_constructor_logo - Переход из личного кабинета в конструктор по клику на логотип Stellar Burgers.

@@ -1,0 +1,30 @@
+from selenium.webdriver.common.by import By
+
+class Locators():
+    registration = (By.LINK_TEXT, 'Зарегистрироваться') #
+    log_in = (By.XPATH, "//*/button[text()[contains(.,'Войти в аккаунт')]]")
+    name = (By.XPATH, "//label[text()='Имя']//following-sibling::input")
+    email = (By.XPATH, "//label[text()='Email']//following-sibling::input")
+    password = (By.XPATH, "//input[@name='Пароль']")
+    reg_now = (By.XPATH, "//*/button[text()='Зарегистрироваться']")
+    log_into = (By.LINK_TEXT, 'Зарегистрироваться')
+    incorrect_password = (By.XPATH, '//*[@class ="input__error text_type_main-default"]')
+    mail_login = (By.XPATH, "//*[@name = 'name']")
+    password_login = (By.XPATH, "//*[@name='Пароль']")
+    enter = (By.XPATH, "//*/button[text()='Войти']")
+    place_an_order = (By.XPATH, "//*[@class = 'button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_large__G21Vg']")
+    personal_account = (By.XPATH, "//*[@id='root']/div/header/nav/a/p")
+    enter_reg_form = (By.LINK_TEXT, 'Войти')
+    recover_password = (By.LINK_TEXT, 'Восстановить пароль')
+    profil = (By.XPATH, "//*[text()='Профиль']")
+    constructor = (By.XPATH, "//*/p[text()='Конструктор']")
+    burger = (By.XPATH, '//*[@class="text text_type_main-large mb-5 mt-10"]')
+    logo_burger = (By.XPATH, "//div[@class='AppHeader_header__logo__2D0X2']")
+    exit_btn = (By.XPATH, "//button[text()='Выход']")
+    bread = (By.XPATH, "//span[text()='Булки']")
+    search_bread = (By.XPATH, "//*/p[text()[contains(.,'Флюоресцентная булка R2-D3')]]")
+    sauce = (By.XPATH, "//div/span[text()='Соусы']")
+    search_souse = (By.XPATH, "//*/p[text()[contains(.,'Соус традиционный галактический')]]")
+    filling = (By.XPATH, "//div/span[text()='Начинки']")
+    search_filling = (By.XPATH, "//*/p[text()[contains(.,'Мясо бессмертных моллюсков Protostomia')]]")
+

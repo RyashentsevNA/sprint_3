@@ -1,8 +1,17 @@
 import random
 from random import choices, sample
 import string
-from tests import *
-from page_objects import *
+from test_cases import *
+import pytest
+from selenium import webdriver
+from selenium import webdriver
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
+from locators import Locators
+
+
+
+
 class RandomRegistration:
     def name():
         random_letters = ''.join(random.choices(string.ascii_letters, k=10))
@@ -35,8 +44,11 @@ class TrueRegistration:
         pas = '1234567'
         return pas
 
-class Login:
-    def true_log_in(self):
-        driver.find_element(*Locators.mail_login).send_keys(TrueRegistration.mail())
-        driver.find_element(*Locators.password_login).send_keys(TrueRegistration.password())
-        driver.find_element(*Locators.enter).click()
+@pytest.fixture
+def driver():
+    driver = webdriver.Chrome()
+    driver.set_window_size(1920, 1080)
+    driver.get("https://stellarburgers.nomoreparties.site")
+    yield driver
+    driver.quit()
+
