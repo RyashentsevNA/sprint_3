@@ -15,7 +15,7 @@ class TestEntrance:
         driver.find_element(*Locators.mail_login).send_keys(TrueRegistration.mail())
         driver.find_element(*Locators.password_login).send_keys(TrueRegistration.password())
         driver.find_element(*Locators.enter).click()
-        WebDriverWait(driver, 60).until(expected_conditions.visibility_of_element_located(Locators.place_an_order))
+        WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(Locators.place_an_order))
         order_btn = driver.find_element(*Locators.place_an_order).text
         assert order_btn == 'Оформить заказ'
 
@@ -23,11 +23,11 @@ class TestEntrance:
 
     def test_log_in_to_account(self, driver): #тест входа через "Личный кабинет"
         driver.find_element(*Locators.personal_account).click()
-        WebDriverWait(driver, 60).until(expected_conditions.visibility_of_element_located(Locators.mail_login))
+        WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(Locators.mail_login))
         driver.find_element(*Locators.mail_login).send_keys(TrueRegistration.mail())
         driver.find_element(*Locators.password_login).send_keys(TrueRegistration.password())
         driver.find_element(*Locators.enter).click()
-        WebDriverWait(driver, 60).until(expected_conditions.visibility_of_element_located(Locators.place_an_order))
+        WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(Locators.place_an_order))
         order_btn = driver.find_element(*Locators.place_an_order).text
         assert order_btn == 'Оформить заказ'
 
@@ -40,7 +40,7 @@ class TestEntrance:
         driver.find_element(*Locators.mail_login).send_keys(TrueRegistration.mail())
         driver.find_element(*Locators.password_login).send_keys(TrueRegistration.password())
         driver.find_element(*Locators.enter).click()
-        WebDriverWait(driver, 60).until(expected_conditions.visibility_of_element_located(Locators.place_an_order))
+        WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(Locators.place_an_order))
         order_btn = driver.find_element(*Locators.place_an_order).text
         assert order_btn == 'Оформить заказ'
 
@@ -52,6 +52,6 @@ class TestEntrance:
         driver.find_element(*Locators.mail_login).send_keys(TrueRegistration.mail())
         driver.find_element(*Locators.password_login).send_keys(TrueRegistration.password())
         driver.find_element(*Locators.enter).click()
-        WebDriverWait(driver, 60).until(expected_conditions.visibility_of_element_located(Locators.place_an_order))
+        WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(Locators.place_an_order))
         order_btn = driver.find_element(*Locators.place_an_order).text
         assert order_btn == 'Оформить заказ'
